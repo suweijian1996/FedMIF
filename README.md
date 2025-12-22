@@ -59,8 +59,9 @@ python FedFusion_test.py
 ```
 This framework introduces two specialized variants to cater to different performance needs:
 
-FedMIF: Optimized for superior visual effects (human perception).
-FedMIF_GN: Optimized for higher objective metrics (state-of-the-art numerical performance).
+FedMIF: Generates smoother results.
+
+FedMIF_GN: Achieves higher objective metrics.
 
 > The results will be saved in the directory specified in the test script.
 
