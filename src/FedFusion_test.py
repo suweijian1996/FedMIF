@@ -62,12 +62,18 @@ for i, (IVDataset) in enumerate(testloader):
     result = global_result + adapter_result
 
 #     # 保存目录
-    save_dir = r"..."
-    if not os.path.exists(save_dir):
-        os.makedirs(save_dir)
+    save_dir = r"./results/"
+    global_dir = save_dir + "global/"
+    client_dir = save_dir + "client/"
+    if not os.path.exists(global_dir):
+        os.makedirs(global_dir)
+        
+    if not os.path.exists(client_dir):
+        os.makedirs(client_dir)
 
 # #     # 保存图像
-    sd, en = savenp((result) * 0.5 + 0.5, save_dir + str(i+1) + ".png")
+    sd, en = savenp((result) * 0.5 + 0.5, client_dir" + str(i+1) + ".png")
+    sd, en = savenp((global_result) * 0.5 + 0.5, global_dir + str(i+1) + ".png")
     print(sd, en)
 
     # _, _ = savenp((adapter_result) * 0.5 + 0.5, save_dir + str(i+1) + "_adapter_" + ".png")
